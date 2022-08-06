@@ -1,0 +1,126 @@
+/* Trigger value - 1225px */
+
+.navbar-container {
+    background-color: black;
+    height: 80px;
+    box-shadow: 0 8px 10px -6px rgb(49, 49, 49);
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    padding-inline: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.navbar-title {
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  padding: var(--s) 0;
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Encode Sans";
+  font-weight: 400;
+  display: flex;
+}
+
+.navbar-subtitle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.85rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-subtitle:hover {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar-subtitle {
+    display: none;
+  }
+}
+
+.navbar-menu {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 0.5rem;
+  list-style: none;
+  text-align: center;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-links {
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--lightgrey);
+}
+
+.navbar-links:hover {
+  transition: all 0.2s ease-out;
+  color: var(--blue);
+}
+
+.navbar-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-gap: 0;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    height: auto;
+  }
+
+  .navbar-menu.active {
+    background: black;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navbar-item {
+    flex-direction: column;
+  }
+
+  .navbar-links {
+    text-align: center;
+    padding: .8rem 0;
+    width: 100%;
+    display: table;
+    font-size: 1rem;
+  }
+
+  .navbar-links:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .navbar-menu-icon {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+  }
+}
