@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/graduation/static/css/main.a80956c5.css",
+    "main.js": "/graduation/static/js/main.fd1c7cfd.js",
+    "static/js/787.1e6f7e72.chunk.js": "/graduation/static/js/787.1e6f7e72.chunk.js",
+    "static/media/Grad_demo_cut.jpg": "/graduation/static/media/Grad_demo_cut.b1ab98d28217f2cfd56d.jpg",
+    "static/media/myStoryBanner.png": "/graduation/static/media/myStoryBanner.cd50a4cccf2e17360cca.png",
+    "static/media/IMP_ML_K_PS.png": "/graduation/static/media/IMP_ML_K_PS.e8bcd6c9b86c58abaac3.png",
+    "static/media/IMP_ML_1CS_4CP.png": "/graduation/static/media/IMP_ML_1CS_4CP.347caf67c3f0fa7683f4.png",
+    "static/media/githubicon.png": "/graduation/static/media/githubicon.3da0486894b515a5d7d8.png",
+    "static/media/MIT-logo-with-spelling-design1-large-black-gray.svg": "/graduation/static/media/MIT-logo-with-spelling-design1-large-black-gray.3e44d6f045eb6fe86148.svg",
+    "static/media/MIT-logo-with-spelling-design1-large-red-gray.svg": "/graduation/static/media/MIT-logo-with-spelling-design1-large-red-gray.3644e193685e536c148f.svg",
+    "static/media/Samuel_Lam_Logo_for_black.svg": "/graduation/static/media/Samuel_Lam_Logo_for_black.b873ad94d193e189d336e81a7377cb33.svg",
+    "index.html": "/graduation/index.html",
+    "main.a80956c5.css.map": "/graduation/static/css/main.a80956c5.css.map",
+    "main.fd1c7cfd.js.map": "/graduation/static/js/main.fd1c7cfd.js.map",
+    "787.1e6f7e72.chunk.js.map": "/graduation/static/js/787.1e6f7e72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a80956c5.css",
+    "static/js/main.fd1c7cfd.js"
+  ]
+}

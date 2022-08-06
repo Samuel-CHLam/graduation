@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="50 140 400 200" width="180" height="80" xmlns="http://www.w3.org/2000/svg" xmlnsbx="https://boxy-svg.com">
+  <defs>
+    <style bxfonts="Encode Sans">@import url(https://fonts.googleapis.com/css2?family=Encode+Sans%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&amp;display=swap);</style>
+  </defs>
+  <g transform="matrix(1.974018, 0, 0, 1.974018, -199.168005, -291.906106)">
+    <g transform="matrix(0.373213, 0, 0, 0.365258, 121.256973, 192.178131)" style="">
+      <path style="fill: rgb(163, 31, 52); stroke: rgb(163, 31, 52);" d="M 74.89 299.496 L 185.304 214.145 C 173.534 269.894 126.262 298.894 74.89 299.496 Z"/>
+      <path style="fill: rgb(207, 20, 43); stroke: rgb(207, 20, 43);" d="M 74.231 298.907 L 184.645 213.556 C 172.875 269.305 125.603 298.305 74.231 298.907 Z" transform="matrix(-1, 0, 0, -1, 258.876007, 512.463013)"/>
+    </g>
+    <g transform="matrix(0.328856, -0.189865, 0.188347, 0.326227, 67.999664, 217.848587)" style="">
+      <path style="stroke: rgb(68, 164, 68); fill: rgb(68, 164, 68);" d="M 74.89 299.496 L 185.304 214.145 C 173.534 269.894 126.262 298.894 74.89 299.496 Z"/>
+      <path style="fill: rgb(151, 198, 30); stroke: rgb(151, 198, 30);" d="M 74.231 298.907 L 184.645 213.556 C 172.875 269.305 125.603 298.305 74.231 298.907 Z" transform="matrix(-1, 0, 0, -1, 258.876007, 512.463013)"/>
+    </g>
+    <g transform="matrix(0.189866, -0.328856, 0.326227, 0.188348, 36.88969, 269.39917)" style="">
+      <path style="stroke: rgb(0, 33, 71); fill: rgb(0, 33, 71);" d="M 74.89 299.496 L 185.304 214.145 C 173.534 269.894 126.262 298.894 74.89 299.496 Z"/>
+      <path style="fill: rgb(0, 62, 116); stroke: rgb(0, 62, 116);" d="M 74.231 298.907 L 184.645 213.556 C 172.875 269.305 125.603 298.305 74.231 298.907 Z" transform="matrix(-1, 0, 0, -1, 258.876007, 512.463013)"/>
+    </g>
+  </g>
+  <text style="fill: rgb(255, 255, 255); font-family: &quot;Encode Sans&quot;; font-size: 20px; font-weight: 500; white-space: pre;" transform="matrix(1.974018, 0, 0, 1.974018, -217.464621, -240.243263)"><tspan x="205.297" y="255.498">CHUN HEI</tspan><tspan x="205.297" dy="1em">​</tspan><tspan>SAMUEL LAM</tspan></text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 9.6px;" x="275.439" y="337.953"> </text>
+</svg>
