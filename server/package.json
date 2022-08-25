@@ -1,0 +1,16 @@
+{
+  "name": "chlam-graduation-webpage-backend",
+  "version": "1.0.0",
+  "description": "this package contains the necessary libraries for the graduation webpage of Samuel CHLam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel-CHLam",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
+  }
+}
