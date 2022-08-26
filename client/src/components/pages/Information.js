@@ -7,17 +7,27 @@ import "./Information.css";
 
 export default function Information () {
   let params = useParams();
-  let name = params.name;
+  let webName = params.name;
 
-  const [invites, setInvites] = useState([]);
+  const [name, setName] = useState([]);
+  const [codes, setCodes] = useState([]);
+  const [venues, setVenues] = useState([]);
+  
   useEffect( () => {
-    // const name = useLocation().pathname.split("/")[2];
     const fetchInvites = async () => {
-      const res = await axios.get(`/invites/name/${name}`);
-      setInvites(res.data[0]);
+      const res = await axios.get(`/invites/name/${webName}`);
+      const resCode = await axios.get("/codes");
+      const resVenue = await axios.get("/venues");
+      const personalInvites = res.data[0];
+      if (personalInvites) {
+        setName(personalInvites.name);
+        const personalCodes = resCode.data.filter(item => personalInvites.codes.includes(item.code));
+        setCodes(personalCodes);
+        setVenues(resVenue.data);
+      }
     }
-    fetchInvites();
-  }, [name]);
+    fetchInvites()
+  }, [webName]);
 
   return (
     <div>
@@ -25,11 +35,23 @@ export default function Information () {
         <h1> Information about photo sessions</h1>
         <h2 className="u-margin-top">Date: 19th October, 2022 (Wednesday)</h2>
 
-        { invites ? (
+        { (codes.length !== 0) ? (
           <>
             <h2 className="u-margin-top">Personal Invite</h2>
-            <p> Name/Group: <b>{invites.name}</b> </p>
-            <p> <b>The above information are yet to be confirmed.</b> If you cannot make the designated slots, 
+            <p> Name/Group: <b>{name}</b> </p>
+            <p> Groups:</p>
+            <div className="information-code-container">
+              {codes.map((item) => {
+                let finalVenue = venues.filter((venueItem) => {return venueItem.venueCode === item.venue})[0];
+                if (!finalVenue) {finalVenue = {venueCode: "TBC", venue: "To be confirmed / please see individual invites."}}
+                return (<div key={item._id} className="information-code-item"> 
+                  <h4 className="u-nomargin">{item.code}. {item.description} </h4>
+                  <p className="u-nomargin"> Meeting Time: {item.time || "To be confirmed / please see individual invites."}</p>
+                  <p className="u-nomargin"> Venue: {finalVenue.venue} </p>
+                </div>)
+              })}
+            </div>
+            <p className="u-margin-top"> <b>The above information are yet to be confirmed.</b> If you cannot make the designated slots, 
               please let me know as soon as possible so that I can rearrange your slots. 
               You are more than welcomed to join us in the following generic slots.</p>
             {/* You may look at the draft timetable <a href="https://samuel-chlam.github.io/masterplan-2022/posts/graduation_arrangement/" target="_blank" rel="noreferrer">here</a>. Please 
@@ -42,8 +64,8 @@ export default function Information () {
         )
         }
         <ul>
-          <li>Time: 20.00</li>
-          <li>Venue: Queen's Lawn (Dangoor Plaza), South Kensington Campus, Imperial College London.</li>
+          <li>Time: 8pm</li>
+          <li>Venue: Queen's Lawn (Dangoor Plaza), South Kensington Campus, Imperial College London, London, SW7 2AZ.</li>
         </ul>
         <h2>General advice</h2>
         <ul>

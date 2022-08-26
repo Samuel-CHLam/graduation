@@ -4,6 +4,8 @@ const port = 5000;
 const dotenv = require("dotenv")
 const mongoose = require("mongoose"); // library to connect to MongoDB
 const inviteRoute = require("./routes/invites");
+const codeRoute = require("./routes/codes");
+const venueRoute = require("./routes/venues");
 
 // Setup for mongodb
 dotenv.config({path: __dirname+'/./../.env'});
@@ -25,6 +27,8 @@ mongoose
 // get is for specific route, use is for any routes that begin with the string.
 
 app.use("/api/invites", inviteRoute);
+app.use("/api/codes", codeRoute)
+app.use("/api/venues", venueRoute)
 
 app.get("/", (req, res) => res.send("Welcome to Samuel Lam's personal api!"));
 app.get("/newEndpoint", (req, res) => res.send("newEndpoint"));
