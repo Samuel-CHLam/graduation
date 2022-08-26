@@ -4,7 +4,6 @@ const Invite = require("../models/Invite");
 // Get an Invite by website name
 router.get("/name/:websiteName", async (req, res) => {
     const websiteName = req.params.websiteName;
-    console.log(websiteName);
     try {
         let invites;
         if (websiteName) {invites = await Invite.find({"website_name": websiteName });} else {websites = await Invite.find();}
@@ -12,6 +11,15 @@ router.get("/name/:websiteName", async (req, res) => {
     } catch (err) {res.status(500).json(err)};
 });
 
+// Get Invites by codes
+router.get("/code/:code", async (req, res) => {
+    const code = req.params.code
+    try {
+        let invites;
+        if (code) {invites = await Invite.find({codes: {$in: [code]}});} else {invites = await Invite.find();}
+        res.status(200).json(invites);
+    } catch (err) {res.status(500).json(err)};
+});
 
 // Create invite
 router.post("/", async (req, res) => {
