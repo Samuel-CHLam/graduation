@@ -4,6 +4,7 @@
   "description": "this package contains the necessary libraries for the graduation webpage of Samuel CHLam",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Samuel-CHLam",
