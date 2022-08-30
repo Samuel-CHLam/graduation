@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
-// const cors = require('cors');
+const cors = require('cors');
 const mongoose = require("mongoose"); // library to connect to MongoDB
 const inviteRoute = require("./routes/invites");
 const codeRoute = require("./routes/codes");
@@ -28,7 +28,7 @@ mongoose
 
 // get is for specific route, use is for any routes that begin with the string.
 
-// app.use(cors());
+app.use(cors());
 
 app.use("/api/invites", inviteRoute);
 app.use("/api/codes", codeRoute);
