@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/graduation/static/css/main.e50f3401.css",
+    "main.css": "/graduation/static/css/main.bbd18e6c.css",
     "main.js": "/graduation/static/js/main.19073d3b.js",
     "static/js/787.1e6f7e72.chunk.js": "/graduation/static/js/787.1e6f7e72.chunk.js",
     "static/media/Grad_demo_cut.jpg": "/graduation/static/media/Grad_demo_cut.b1ab98d28217f2cfd56d.jpg",
@@ -12,12 +12,12 @@
     "static/media/MIT-logo-with-spelling-design1-large-red-gray.svg": "/graduation/static/media/MIT-logo-with-spelling-design1-large-red-gray.3644e193685e536c148f.svg",
     "static/media/Samuel_Lam_Logo_for_black.svg": "/graduation/static/media/Samuel_Lam_Logo_for_black.b873ad94d193e189d336e81a7377cb33.svg",
     "index.html": "/graduation/index.html",
-    "main.e50f3401.css.map": "/graduation/static/css/main.e50f3401.css.map",
+    "main.bbd18e6c.css.map": "/graduation/static/css/main.bbd18e6c.css.map",
     "main.19073d3b.js.map": "/graduation/static/js/main.19073d3b.js.map",
     "787.1e6f7e72.chunk.js.map": "/graduation/static/js/787.1e6f7e72.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e50f3401.css",
+    "static/css/main.bbd18e6c.css",
     "static/js/main.19073d3b.js"
   ]
 }
