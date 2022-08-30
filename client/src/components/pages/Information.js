@@ -46,7 +46,7 @@ export default function Information () {
                   let codeTime = codes.filter(code => {return code.time === item.time});
                   return (
                     <div key={item._id}>
-                    { (codeTime.length != 0) ? (
+                    { (codeTime.length !== 0) ? (
                       <div key={item._id}>
                         <h3>Session: {item.time}</h3>
                         <p> Venue: {item.venue}</p>
