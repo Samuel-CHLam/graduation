@@ -5,7 +5,6 @@ const cors = require('cors');
 const mongoose = require("mongoose"); // library to connect to MongoDB
 const inviteRoute = require("./routes/invites");
 const codeRoute = require("./routes/codes");
-const venueRoute = require("./routes/venues");
 const venueTimeRoute = require("./routes/venuetimes");
 const port = process.env.PORT || 5000;
 
@@ -32,7 +31,6 @@ app.use(cors());
 
 app.use("/api/invites", inviteRoute);
 app.use("/api/codes", codeRoute);
-app.use("/api/venues", venueRoute);
 app.use("/api/venuetimes", venueTimeRoute)
 
 app.get("/", (req, res) => res.send("Welcome to Samuel Lam's personal api!"));
