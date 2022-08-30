@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
+const cors = require('cors');
 const mongoose = require("mongoose"); // library to connect to MongoDB
 const inviteRoute = require("./routes/invites");
 const codeRoute = require("./routes/codes");
@@ -26,6 +27,8 @@ mongoose
   .catch((err) => console.log(`Error connecting to MongoDB111: ${err}`));
 
 // get is for specific route, use is for any routes that begin with the string.
+
+app.use(cors());
 
 app.use("/api/invites", inviteRoute);
 app.use("/api/codes", codeRoute);
