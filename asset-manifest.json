@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/graduation/static/css/main.acae5db0.css",
-    "main.js": "/graduation/static/js/main.facd1dbe.js",
+    "main.js": "/graduation/static/js/main.777731da.js",
     "static/js/787.1e6f7e72.chunk.js": "/graduation/static/js/787.1e6f7e72.chunk.js",
     "static/media/Grad_demo_cut.jpg": "/graduation/static/media/Grad_demo_cut.b1ab98d28217f2cfd56d.jpg",
     "static/media/myStoryBanner.png": "/graduation/static/media/myStoryBanner.cd50a4cccf2e17360cca.png",
@@ -13,11 +13,11 @@
     "static/media/Samuel_Lam_Logo_for_black.svg": "/graduation/static/media/Samuel_Lam_Logo_for_black.b873ad94d193e189d336e81a7377cb33.svg",
     "index.html": "/graduation/index.html",
     "main.acae5db0.css.map": "/graduation/static/css/main.acae5db0.css.map",
-    "main.facd1dbe.js.map": "/graduation/static/js/main.facd1dbe.js.map",
+    "main.777731da.js.map": "/graduation/static/js/main.777731da.js.map",
     "787.1e6f7e72.chunk.js.map": "/graduation/static/js/787.1e6f7e72.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.acae5db0.css",
-    "static/js/main.facd1dbe.js"
+    "static/js/main.777731da.js"
   ]
 }
