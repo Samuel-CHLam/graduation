@@ -15,14 +15,14 @@ export default function Information () {
   
   useEffect( () => {
     const fetchInvites = async () => {
-      const res = await axios.get(`/invites/name/${webName}`);
-      const resCode = await axios.get("/codes");
-      const resVenueTimes = await axios.get("/venuetimes");
+      const BaseURL = "https://samuelchlam.herokuapp.com/api"
+      const res = await axios.get(`${BaseURL}/invites/name/${webName}`);
+      const resCode = await axios.get(`${BaseURL}/codes`);
+      const resVenueTimes = await axios.get(`${BaseURL}/venuetimes`);
       const personalInvites = res.data[0];
       if (personalInvites) {
         setName(personalInvites.name);
-        const personalCodes = resCode.data.filter(item => personalInvites.codes.includes(item.code)).sort((a,b) => {return (a.code > b.code) ? 1 : ((b.code > a.code) ? -1 : 0);} );;
-        console.log(personalCodes)
+        const personalCodes = resCode.data.filter(item => personalInvites.codes.includes(item.code)).sort((a,b) => {return (a.code > b.code) ? 1 : ((b.code > a.code) ? -1 : 0);} );
         setCodes(personalCodes);
         setVenueTimes(resVenueTimes.data);
       }
