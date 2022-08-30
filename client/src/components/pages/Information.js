@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useParams} from "react-router";
 import axios from "axios";
 
@@ -45,38 +45,43 @@ export default function Information () {
                 venueTimes.map((item) => {
                   let codeTime = codes.filter(code => {return code.time === item.time});
                   return (
-                    <div key={item._id}>
-                    { (codeTime.length !== 0) ? (
-                      <div key={item._id}>
-                        <h3>Session: {item.time}</h3>
-                        <p> Venue: {item.venue}</p>
-                        <ul>
-                          {codeTime.map((relCode) => {return <li key={relCode.code}>{relCode.code}. {relCode.description}</li>})}
-                        </ul>
-                      </div>
-                    ) : (<> </>)}
-                    </div>
-                  )
+                    <React.Fragment key={item._id}>
+                      {(codeTime.length !==0) ? (
+                        <div className="information-code-item">
+                          <h3 className="u-nomargin">Session: {item.time}</h3>
+                          <p> Venue: {item.venue}</p>
+                          <ul className="u-nomargin u-margin-top">
+                            {codeTime.map((relCode) => {return <li key={relCode.code}>{relCode.code}. {relCode.description}</li>})}
+                          </ul>
+                        </div>) : (<> </>)
+                        }
+                    </React.Fragment>
+                  );
                 })
               }
+              <p className="u-margin-top"> <b>The above information are provisional, and are sent to you for consultation.</b> A final invite 
+              will be sent out later in Septmeber. If you cannot make the designated slots, please let me know as soon as possible so that I can 
+              make changes to the time of the slots. You are more than welcomed to join us in the following generic make-up slots.</p>
+              <div className="information-code-make-up">
+                <h3 className="u-nomargin">Session: 8pm (Make Up)</h3>
+                <p className="u-nomargin">Venue: Queen's Lawn (Dangoor Plaza), South Kensington Campus, Imperial College London, London, SW7 2AZ.</p>
+              </div>
             </div>
-            <p className="u-margin-top"> <b>The above information are yet to be confirmed.</b> If you cannot make the designated slots, 
-              please let me know as soon as possible so that I can rearrange your slots. 
-              You are more than welcomed to join us in the following generic slots.</p>
             {/* You may look at the draft timetable <a href="https://samuel-chlam.github.io/masterplan-2022/posts/graduation_arrangement/" target="_blank" rel="noreferrer">here</a>. Please 
               provide us feedback on the draft timetable. */}
               </>
         ) : (
           <>
             <p>Please refer to the personal invites for further information. The following generic slots may be available.</p>
+            <div className="information-code-container">
+              <div className="information-code-make-up">
+                <h3 className="u-nomargin">Session: 8pm (Make Up)</h3>
+                <p className="u-nomargin">Venue: Queen's Lawn (Dangoor Plaza), South Kensington Campus, Imperial College London, London, SW7 2AZ.</p>
+              </div>
+            </div>
           </>
         )}
-        
-        <ul>
-          <li>Time: 8pm</li>
-          <li>Venue: Queen's Lawn (Dangoor Plaza), South Kensington Campus, Imperial College London, London, SW7 2AZ.</li>
-        </ul>
-        <h2>General advice</h2>
+        <h2 className="u-margin-top">General advice</h2>
         <ul>
           <li>Recommended dress code: formal / smart casual. </li>
           <li>Gifts (including flowers) are appreciated but optional - feel free to just come! Flowers and graduation dolls are provided.</li>
